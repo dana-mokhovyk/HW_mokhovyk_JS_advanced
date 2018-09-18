@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+        var wordsArr = [
+          'word',
+          'sun',
+          'human',
+          'javascript',
+          'string',
+          'object',
+          'number',
+          'earth'
+        ];
+
+        var word = wordsArr[Math.floor(Math.random()*wordsArr.length)];
+
+        var answer =[];
+        var remain = word.length;
+        var attempt = word.length;
+
+        for(var i = 0; i < word.length; i++) {
+          answer[i] = '*';
+        }
+
+        while (remain > 0 && attempt > 0) {
+            alert(answer.join(''));
+            var guess = prompt('guess letter or cancel if you want to quit. you have ' + attempt + ' attempts left');
+            if (guess === null) {
+              break;
+            }
+            else if (guess.length !== 1) {
+              alert('One letter at a time please');
+            }
+            else {
+              let isGuessed = false;
+
+              for (var j = 0; j < word.length; j++ ) {
+                if (word[j] === guess) {
+                  isGuessed = true;
+                  answer[j] = guess;
+                  remain--;
+                }
+              }
+
+              if (!isGuessed) {
+                attempt--;
+              }
+            }
+
+        }
+        alert (answer.join(''));
+        alert ('your word is ' + word.toUpperCase());
+
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>
