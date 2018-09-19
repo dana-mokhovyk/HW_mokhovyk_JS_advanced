@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        var array1 = prompt('input first array', '1,2,3,4,5');
+        var array2 = prompt('input second array', '1,2,3,4,5');
+        var operation = prompt('input arifmetical operation +, -, *, or /', '+');
+        var res;
+        var result = new Array();
+        var array1 = array1.split(",");
+        var array2 = array2.split(",");
+
+        document.write('Array 1: ' + array1 + '<br>');
+        document.write('Array 2: ' + array2 + '<br>');
+        document.write('Operation: ' + operation + '<br>');
+
+        function add (arr1, arr2) {
+          for (var i = 0; i < arr1.length; i++) {
+              res = parseInt(arr1[i]) + parseInt(arr2[i]);
+              result.push(res);
+          }
+          document.write('New array: ' + result);
+        }
+        function sub (arr1, arr2) {
+          for (var i = 0; i < arr1.length; i++) {
+              res = parseInt(arr1[i]) - parseInt(arr2[i]);
+              result.push(res);
+          }
+          document.write('New array: ' + result);
+        }
+
+        function calculate (arr1, arr2, op) {
+          if (arr1.length != arr2.length) {
+            alert ('arrays should have eaqual length!');
+            return false;
+          }
+          switch (op) {
+            case '+':
+              add (arr1, arr2);
+              break;
+            case '-':
+              sub (arr1, arr2);
+              break;
+            default:
+              alert('please input operation next time')
+
+          }
+        }
+
+        calculate(array1, array2, operation);
+
+        // var l1 = array1.length;
+        // var l2 = array2.length;
+        //
+        // document.write("Длина массива 1: " + l1 + "<br>");
+        // document.write("Длина массива 2: " + l2 + "<br>");
+
+        // function calc() {
+        //     if (l1 != l2) {
+        //         document.write("Введенные массивы имеют разный размер!<br>");
+        //         alert("Введенные массивы имеют разный размер!<br>")
+        //     }
+        //     else {
+        //         document.write("Введенные массивы имеют одинаковый размер <br>");
+        //      }
+        //     if (op == "+") {
+        //         for (var i = 0; i < l1; i++) {
+        //             res = parseInt(ar1[i]) + parseInt(ar2[i]);
+        //             result.push(res);
+        //         }
+        //         document.write(result);
+        //     }
+        //     else if (op == "-") {
+        //         for (var i = 0; i < l1; i++) {
+        //             res = parseInt(ar1[i]) - parseInt(ar2[i]);
+        //             result.push(res);
+        //         }
+        //         document.write(result);
+        //     }
+        //     else if (op == "*") {
+        //         for (var i = 0; i < l1; i++) {
+        //             res = parseInt(ar1[i]) * parseInt(ar2[i]);
+        //             result.push(res);
+        //         }
+        //         document.write(result);
+        //
+        //     }
+        //     else if (op == "/") {
+        //         for (var i = 0; i < l1; i++) {
+        //             res = parseInt(ar1[i]) / parseInt(ar2[i]);
+        //             result.push(res);
+        //         }
+        //         document.write(result);
+        //     }
+        // }
+        //
+        // calc();
+
+
+
+    </script>
+
+
+
+</body>
+</html>
