@@ -34,6 +34,20 @@
           }
           document.write('New array: ' + result);
         }
+        function mul (arr1, arr2) {
+          for (var i = 0; i < arr1.length; i++) {
+              res = parseInt(arr1[i]) * parseInt(arr2[i]);
+              result.push(res);
+          }
+          document.write('New array: ' + result);
+        }
+        function div (arr1, arr2) {
+          for (var i = 0; i < arr1.length; i++) {
+              res = parseInt(arr1[i]) / parseInt(arr2[i]);
+              result.push(res);
+          }
+          document.write('New array: ' + result);
+        }
 
         function calculate (arr1, arr2, op) {
           if (arr1.length != arr2.length) {
@@ -47,6 +61,12 @@
             case '-':
               sub (arr1, arr2);
               break;
+            case '*':
+              mul (arr1, arr2);
+              break;
+            case '/':
+              div (arr1, arr2);
+              break;
             default:
               alert('please input operation next time')
 
@@ -54,53 +74,6 @@
         }
 
         calculate(array1, array2, operation);
-
-        // var l1 = array1.length;
-        // var l2 = array2.length;
-        //
-        // document.write("Длина массива 1: " + l1 + "<br>");
-        // document.write("Длина массива 2: " + l2 + "<br>");
-
-        // function calc() {
-        //     if (l1 != l2) {
-        //         document.write("Введенные массивы имеют разный размер!<br>");
-        //         alert("Введенные массивы имеют разный размер!<br>")
-        //     }
-        //     else {
-        //         document.write("Введенные массивы имеют одинаковый размер <br>");
-        //      }
-        //     if (op == "+") {
-        //         for (var i = 0; i < l1; i++) {
-        //             res = parseInt(ar1[i]) + parseInt(ar2[i]);
-        //             result.push(res);
-        //         }
-        //         document.write(result);
-        //     }
-        //     else if (op == "-") {
-        //         for (var i = 0; i < l1; i++) {
-        //             res = parseInt(ar1[i]) - parseInt(ar2[i]);
-        //             result.push(res);
-        //         }
-        //         document.write(result);
-        //     }
-        //     else if (op == "*") {
-        //         for (var i = 0; i < l1; i++) {
-        //             res = parseInt(ar1[i]) * parseInt(ar2[i]);
-        //             result.push(res);
-        //         }
-        //         document.write(result);
-        //
-        //     }
-        //     else if (op == "/") {
-        //         for (var i = 0; i < l1; i++) {
-        //             res = parseInt(ar1[i]) / parseInt(ar2[i]);
-        //             result.push(res);
-        //         }
-        //         document.write(result);
-        //     }
-        // }
-        //
-        // calc();
 
 
 
