@@ -12,7 +12,7 @@
         var array2 = prompt('input second array', '1,2,3,4,5');
         var operation = prompt('input arifmetical operation +, -, *, or /', '+');
         var res;
-        var result = new Array();
+        var newArr = new Array();
         var array1 = array1.split(",");
         var array2 = array2.split(",");
 
@@ -23,30 +23,30 @@
         function add (arr1, arr2) {
           for (var i = 0; i < arr1.length; i++) {
               res = parseInt(arr1[i]) + parseInt(arr2[i]);
-              result.push(res);
+              newArr.push(res);
           }
-          document.write('New array: ' + result);
+          document.write('New array: ' + newArr);
         }
         function sub (arr1, arr2) {
           for (var i = 0; i < arr1.length; i++) {
               res = parseInt(arr1[i]) - parseInt(arr2[i]);
-              result.push(res);
+              newArr.push(res);
           }
-          document.write('New array: ' + result);
+          document.write('New array: ' + newArr);
         }
         function mul (arr1, arr2) {
           for (var i = 0; i < arr1.length; i++) {
               res = parseInt(arr1[i]) * parseInt(arr2[i]);
-              result.push(res);
+              newArr.push(res);
           }
-          document.write('New array: ' + result);
+          document.write('New array: ' + newArr);
         }
         function div (arr1, arr2) {
           for (var i = 0; i < arr1.length; i++) {
               res = parseInt(arr1[i]) / parseInt(arr2[i]);
-              result.push(res);
+              newArr.push(res);
           }
-          document.write('New array: ' + result);
+          document.write('New array: ' + newArr);
         }
 
         function calculate (arr1, arr2, op) {
