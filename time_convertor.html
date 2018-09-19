@@ -8,22 +8,40 @@
 
 	<script>
 
-      var seconds = prompt('input number of seconds');
+      var sec = prompt('input number of seconds');
 
       function timeConvert (s) {
-        var mins = Math.floor(s/60 % 60);
         var secs = Math.floor(s % 60);
-        var hours = Math.floor(s/60/60);
-        if(mins < 10){
-            mins = "0" + mins;
-        }
-        if(secs < 10){
-            secs = "0" + secs;
-        }
-        document.write(hours + ":" + mins + ":" + secs);
+        var mins = Math.floor(s/60 % 60);
+        var hours = Math.floor(s/60/60 % 24);
+        var days = Math.floor(s/60/60/24 % 365);
+        var years = Math.floor(s/60/60/24/365);
+
+        document.write(
+          output('year', years)
+          + output('day', days)
+          + output('hour', hours)
+          + output('minute', mins)
+          + output('second', secs)
+        );
       }
 
-      timeConvert(seconds);
+      function output (unit, value) {
+        var res = '';
+
+        if (value == 0 ) {
+          res = '';
+        }
+        else if (value == 1) {
+          res = value + unit + ' ';
+        }
+        else {
+          res = value  + unit + 's ';
+        };
+        return res;
+      }
+
+      timeConvert(sec);
 
 
 
