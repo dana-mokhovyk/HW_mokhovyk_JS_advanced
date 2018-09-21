@@ -8,27 +8,21 @@
 
 	<script>
 
-			var input = prompt ('input your title here');
-			var output = '#';
+			var input = prompt('input your title here');
 
-			array = input.split(' ');
-
-			for (var i = 0; i < array.length; i++) {
-				array[i] = capitalizeFirstLetter(array[i]);
-			}
+			array = input.split(' ').map(capitalizeFirstLetter);
 
 			function capitalizeFirstLetter(string) {
     		return string[0].toUpperCase() + string.slice(1);
 			}
 
-			function outputHashtag () {
-				for (var i = 0; i < array.length; i++) {
-					output += array[i];
-				}
-				alert(output);
+			function concat(res, item) {
+				return res + item;
 			}
 
-			outputHashtag();
+			var output = array.reduce(concat, '#');
+
+			alert(output);
 
 
 
