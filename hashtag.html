@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+			var input = prompt ('input your title here');
+			var output = '#';
+
+			array = input.split(' ');
+
+			for (var i = 0; i < array.length; i++) {
+				array[i] = capitalizeFirstLetter(array[i]);
+			}
+
+			function capitalizeFirstLetter(string) {
+    		return string[0].toUpperCase() + string.slice(1);
+			}
+
+			function outputHashtag () {
+				for (var i = 0; i < array.length; i++) {
+					output += array[i];
+				}
+				alert(output);
+			}
+
+			outputHashtag();
+
+
+
+  </script>
+
+</body>
+</html>
