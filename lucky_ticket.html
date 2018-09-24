@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+			var num =	Math.floor(100000 + Math.random() * 900000);
+
+			alert (`your ticket number is ${num}`);
+
+			function isLucky(n) {
+				var numArr = (n).toString(10).split("").map(function(t){return parseInt(t)});
+
+				if (numArr[0]+numArr[1]+numArr[2] === numArr[3]+numArr[4]+numArr[4]) {
+					alert('your ticket is lucky!')
+				}
+				else {
+					alert('your ticket is not lucky. try next time')
+				};
+			}
+
+			isLucky(num);
+
+  </script>
+
+</body>
+</html>
