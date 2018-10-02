@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            float: left;
+            background-color: green;
+            margin: 5px;
+        }
+    </style>
+    <script type="text/javascript">
+        var div = document.getElementsByTagName("div");
+        var iter = 0;
+        window.onload = function(){
+            document.getElementsByTagName("button")[0].onclick = function () {
+                if (iter > 4) {
+                    iter = 0;
+
+                    div[4].style.backgroundColor = "green";
+                }
+                for (var i = 0; i < iter; i++) {
+                    div[i].style.backgroundColor = "green";
+                };
+                div[iter].style.backgroundColor = "red";
+                iter++;
+
+            }
+        }
+    </script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<button type="button">Click Me!</button>
+</body>
+</html>

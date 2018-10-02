@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+    const sequenceSum = (begin, end) => {
+      return begin === end ? end :
+      begin > end ? NaN :
+      begin + sequenceSum((begin+1), end);
+    };
+
+    //console.log(sequenceSum(6,2));
+
+    const smallestDivisor = (num) => {
+      const iter = (counter, num) => {
+        if ((num % counter) === 0) {
+          return counter;
+        }
+        else if (counter > Math.sqrt(num)) {
+          return num;
+        }
+        else {
+          return iter(counter+1, num);
+        }
+      }
+      return iter(2, num);
+    };
+
+
+    const smallestDivisor2 = (num) => {
+      let divisor = 2;
+
+      if(num < 1) {
+        return NaN;
+      }
+
+      if(num === 1) {
+        return num;
+      }
+
+      while (num % divisor) {
+        divisor++;
+      }
+
+      return divisor;
+    };
+    console.log(smallestDivisor2(15));
+
+
+
+
+
+  </script>
+
+
+</body>
+</html>
