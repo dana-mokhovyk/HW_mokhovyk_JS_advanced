@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        window.addEventListener("keydown", function (event) {
+
+            var div = document.getElementById("div");
+
+            if (event.ctrlKey && event.keyCode == 83) {
+                div.innerHTML = "Сохранено";
+            }
+            if (event.ctrlKey && event.keyCode == 65) {
+                div.innerHTML = "Выбрано все";
+            }
+            if (event.ctrlKey && event.shiftKey && event.keyCode == 83) {
+                div.innerHTML = "Сохранено все";
+            }
+        })
+
+    </script>
+</head>
+<body>
+<div id="div"></div>
+</body>
+</html>

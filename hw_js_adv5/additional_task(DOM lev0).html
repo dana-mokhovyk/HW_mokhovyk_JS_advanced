@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_js(adv)_5</title>
+    <script>
+        //Дополнительное задание (DOM level 0)
+
+        function arithmeticOperations() {
+            var addOperation = document.getElementById("add");
+            var subOperation = document.getElementById("sub");
+            var mulOperation = document.getElementById("mul");
+            var divOperation = document.getElementById("div");
+
+            var num1 = document.getElementById("numOne").value;
+            var num2 = document.getElementById("numTwo").value;
+
+            var divResult = document.getElementById("result");
+
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+
+            var result1 = num1 + num2;
+            var result2 = num1 - num2;
+            var result3 = num1 * num2;
+            var result4 = num1 / num2;
+
+            addOperation.onclick = function () {
+                divResult.innerHTML = "Результат равен " + result1;
+            }
+
+            subOperation.onclick = function () {
+                divResult.innerHTML = "Результат равен " + result2;
+            }
+
+            mulOperation.onclick = function () {
+                divResult.innerHTML = "Результат равен " + result3;
+            }
+
+            divOperation.onclick = function () {
+                if (num2 != 0) {
+                    divResult.innerHTML = "Результат равен " + result4;
+                }
+                else {
+                    divResult.innerHTML = "На ноль делить нельзя!";
+                }
+
+            }
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+<input type="text" id="numOne" placeholder="Введите первое число" oninput="arithmeticOperations()"/>
+<input type="text" id="numTwo" placeholder="Введите второе число" oninput="arithmeticOperations()"/><br/><br/>
+
+<input type="button" id="add" value="+"/>
+<input type="button" id="sub" value="-"/>
+<input type="button" id="mul" value="*"/>
+<input type="button" id="div" value="/"/>
+
+<div id="result">
+
+</div>
+</body>
+</html>

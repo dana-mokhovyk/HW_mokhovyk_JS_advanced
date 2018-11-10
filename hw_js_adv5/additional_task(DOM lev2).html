@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_js(adv)_5</title>
+    <script>
+        //Дополнительное задание (DOM level 2)
+
+        window.addEventListener("input", function () {
+            var addOperation = document.getElementById("add");
+            var subOperation = document.getElementById("sub");
+            var mulOperation = document.getElementById("mul");
+            var divOperation = document.getElementById("div");
+
+            var divResult = document.getElementById("result");
+
+            var num1 = document.getElementById("numOne").value;
+            var num2 = document.getElementById("numTwo").value;
+
+                num1 = parseInt(num1);
+                num2 = parseInt(num2);
+
+                var result1 = num1 + num2;
+                var result2 = num1 - num2;
+                var result3 = num1 * num2;
+                var result4 = num1 / num2;
+
+                addOperation.addEventListener("click",
+                    function () {
+                        divResult.innerHTML = "Результат равен " + result1;
+                    },
+                    false);
+
+                subOperation.addEventListener("click",
+                    function () {
+                        divResult.innerHTML = "Результат равен " + result2;
+                    },
+                    false);
+
+                mulOperation.addEventListener("click",
+                    function () {
+                        divResult.innerHTML = "Результат равен " + result3;
+                    },
+                    false);
+
+                divOperation.addEventListener("click",
+                    function () {
+                        if (num2 != 0) {
+                            divResult.innerHTML = "Результат равен " + result4;
+                        }
+                        else {
+                            divResult.innerHTML = "На ноль делить нельзя!";
+                        }
+                    },
+                    false);
+        }, false);
+
+    </script>
+
+</head>
+<body>
+
+<input type="text" id="numOne" placeholder="Введите первое число" />
+<input type="text" id="numTwo" placeholder="Введите второе число" /><br/><br/>
+
+<input type="button" id="add" value="+"/>
+<input type="button" id="sub" value="-"/>
+<input type="button" id="mul" value="*"/>
+<input type="button" id="div" value="/"/>
+
+<div id="result">
+
+</div>
+</body>
+</html>

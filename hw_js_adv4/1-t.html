@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-t</title>
+</head>
+<body>
+    <label>Введите число от 1 до 100</br></label><input type="text" id="number" value=""/></br>
+	<input type="button" id="btn" value="Жми"/>
+	<div></div>
+	
+	<script type="text/javascript">
+		window.onload = function () {
+             var div = document.getElementsByTagName("div")[0];
+             document.getElementById("btn").onclick = function(){
+             var number = parseInt(document.getElementById("number").value);
+            var userNumber = getRandom(1,100);
+              if (number > userNumber) {
+              	  div.innerHTML = "Загаданное значение больше введенного вами";
+              }
+                    else if(number < userNumber){
+                    div.innerHTML = "Загаданное значение меньше введенного вами";
+                  
+                }
+                else {
+                    div.innerHTML = "Ура!Правильно! ";
+                   
+                }
+            }
+        }
+            
+            function getRandom(min, max)
+            {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+ 
+
+</script>
+
+	
+</body>
+</html>

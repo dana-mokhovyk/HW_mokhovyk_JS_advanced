@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+
+            function init() {
+
+              function move(direction, delta) {
+
+                var $elem = document.getElementById('elem');
+                var x = direction == 'left' ? $elem.offsetLeft : $elem.offsetTop;
+
+                x += delta;
+                $elem.style[direction] = x + 'px';
+              }
+
+              document.addEventListener('keydown', function (e) {
+                switch (e.keyCode) {
+                  case 39:
+                    move('left', 50);
+                    break;
+                  case 37:
+                    move('left', -50);
+                    break;
+                  case 40:
+                    move('top', 50);
+                    break;
+                  case 38:
+                    move('top', -50);
+                    break;
+                  }
+                })
+              }
+              init();
+
+    </script>
+</head>
+<body>
+    <div id="elem" style="position: absolute; left: 100px; top: 100px; height: 50px; width: 50px; background-color: Green;">
+    </div>
+</body>
+</html>

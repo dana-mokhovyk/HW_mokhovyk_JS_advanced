@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>an</title>
+
+ <script type="text/javascript">
+
+      function thumb_down () {
+        x = 0;
+        x = document.getElementById("thumb").offsetTop;
+        xn = x + 50;
+        document.getElementById("thumb").style.top = xn+"px"
+      }
+      function thumb_up () {
+        x = 0;
+        x = document.getElementById("thumb").offsetTop;
+        xn = x - 50;
+        document.getElementById("thumb").style.top = xn+"px"
+      }
+      function thumb_left () {
+        x = 0;
+        x = document.getElementById("thumb").offsetLeft;
+        xn = x - 50;
+        document.getElementById("thumb").style.left = xn+"px"
+      }
+      function thumb_right () {
+        x = 0;
+        x = document.getElementById("thumb").offsetLeft;
+        xn = x + 50;
+        document.getElementById("thumb").style.left = xn+"px"
+      }
+
+
+    </script>
+
+</head>
+<body>
+
+
+<input type="button" value="Вниз" onclick="thumb_down()">
+<input type="button" value="Вверх" onclick="thumb_up()">
+<input type="button" value="Влево" onclick="thumb_left()">
+<input type="button" value="Вправо" onclick="thumb_right()">
+<img id='thumb' src="thumb.png" style="position:absolute; top:100px; left:100px">
+
+
+</body>
+</html>

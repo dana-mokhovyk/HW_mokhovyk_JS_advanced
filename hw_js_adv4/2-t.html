@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="2-t.css">
+</head>
+<body>
+	<script type="text/javascript">
+
+			window.onload = function () {
+        var no = document.getElementById("no");
+        var yes = document.getElementById("yes");
+
+        yes.style.display="none";
+        no.style.display="none";
+        document.getElementById("btn").onclick = function(){
+
+        	var log = document.getElementsByName("auto");
+          for(var i = 0; i<log.length;i++){
+            if(log[i].value.length == 0){
+              log[i].style.backgroundColor = "red";
+              no.style.display="block";
+              yes.style.display="none";
+            }
+            else if(log[i].value =="admin" && log[i+1].value == "12345"){
+              log[i].style.fontColor = "green";
+              yes.style.display="block";
+            }
+            else{
+            	log[i].style.fontColor = "green";
+              no.style.display="none";
+            }
+          }
+
+        }
+
+      }
+
+
+	</script>
+
+
+
+
+<div>
+  <form>
+	  <label>Логин</label><input type="text" id="first" name="auto"/></br>
+	  <label>Пароль</label><input type="text" id="second" name="auto"/></br>
+	  <label>Запомнить меня</label><input type="checkbox"/></br>
+    <input type="button" id="btn" value="Отправить"/>
+  </form>
+    <span id="no">Вы не заполнили поля логин и пароль</span>
+    <span id="yes">Вы авторизированы</span>
+</div>
+
+
+</body>
+</html>

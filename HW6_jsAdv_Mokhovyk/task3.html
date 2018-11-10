@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        window.onload = function () {
+
+          var $elem = document.getElementById('button');
+
+          $elem.addEventListener('mouseenter', function () {
+
+            $elem.style.left = getRandomInt(30, 500) + 'px';
+            $elem.style.top =  getRandomInt(30, 500) + 'px';
+
+          })
+
+          function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+          }
+
+
+        }
+
+    </script>
+</head>
+<body>
+<button id="button" type="button" style="position: absolute; left: 100px; top: 100px;">Discount</button>
+</body>
+</html>

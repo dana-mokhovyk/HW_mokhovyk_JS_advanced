@@ -1,0 +1,56 @@
+body {
+	width: 100%;
+	margin: 0 auto;
+	
+
+}
+  #first, #second {
+  	width: 200px;
+  	height: 30px;
+  	padding: 5px;
+  	margin: 5px;
+  	font-weight: bold;
+  }
+
+  #yes {
+  	color: green;
+  	font-weight: bold;
+  	padding: 5px;
+  	margin: 5px;
+  }
+
+  #no {
+  	color: black;
+    font-weight: bold;
+  	padding: 5px;
+  	margin: 5px;
+
+  }
+
+   label {
+   	font-weight: bold;
+   }
+
+
+div {
+	width: 450px;
+    height: 300px;
+    background: #FFFFFF;
+    margin: 250px 500px 250px 500px;
+   
+}
+
+#btn{
+	width: 110px;
+	padding:13px 30px;
+	margin:0 10px 0 0;
+	padding:5px 20px;
+	border-radius:25px;
+	text-align: center;
+	color:white;
+	background-color:red;
+
+}
+	
+
+
